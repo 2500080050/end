@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Account</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <section class="signup-card">
+      <div class="brand-mark">✦</div>
+      <p class="eyebrow">WELCOME</p>
+      <h1>Create your account</h1>
+      <p class="subtitle">Sign up to get started. It only takes a minute.</p>
+
+      <form id="signupForm" novalidate>
+        <div class="field">
+          <label for="fullName">Full name</label>
+          <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" autocomplete="name">
+          <small class="error" id="nameError"></small>
+        </div>
+
+        <div class="field">
+          <label for="email">Email address</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email">
+          <small class="error" id="emailError"></small>
+        </div>
+
+        <div class="field">
+          <label for="password">Password</label>
+          <div class="password-wrap">
+            <input type="password" id="password" name="password" placeholder="At least 8 characters" autocomplete="new-password">
+            <button type="button" class="toggle-password" id="togglePassword" aria-label="Show password">Show</button>
+          </div>
+          <small class="hint">Use at least 8 characters.</small>
+          <small class="error" id="passwordError"></small>
+        </div>
+
+        <div class="field">
+          <label for="confirmPassword">Confirm password</label>
+          <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Enter your password again" autocomplete="new-password">
+          <small class="error" id="confirmError"></small>
+        </div>
+
+        <label class="terms">
+          <input type="checkbox" id="terms">
+          <span>I agree to the <a href="#" onclick="return false;">Terms of Service</a> and <a href="#" onclick="return false;">Privacy Policy</a>.</span>
+        </label>
+        <small class="error terms-error" id="termsError"></small>
+
+        <button class="submit-btn" type="submit">Create account <span>→</span></button>
+        <p class="success-message" id="successMessage" role="status"></p>
+      </form>
+
+      <p class="login-note">Already have an account? <a href="#" onclick="return false;">Log in</a></p>
+    </section>
+    <p class="footer-note">A simple, secure start to something great.</p>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap');
+
+:root {
+  --ink: #20243a;
+  --muted: #777d91;
+  --purple: #7057e8;
+  --purple-dark: #5b43d0;
+  --line: #e7e8f0;
+  --danger: #d64545;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'DM Sans', sans-serif;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 12% 15%, rgba(174, 157, 255, .28), transparent 28%),
+    radial-gradient(circle at 88% 85%, rgba(151, 207, 255, .28), transparent 30%),
+    #f6f7fc;
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 38px 18px 20px;
+}
+
+.signup-card {
+  width: 100%;
+  max-width: 440px;
+  padding: 38px 42px 30px;
+  background: rgba(255, 255, 255, .96);
+  border: 1px solid rgba(231, 232, 240, .9);
+  border-radius: 22px;
+  box-shadow: 0 22px 70px rgba(46, 43, 92, .10);
+}
+
+.brand-mark {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  color: white;
+  font-size: 24px;
+  background: linear-gradient(135deg, #927eff, #6249db);
+  box-shadow: 0 8px 18px rgba(112, 87, 232, .25);
+}
+
+.eyebrow {
+  margin: 25px 0 7px;
+  color: var(--purple);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+h1 {
+  margin: 0;
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(25px, 5vw, 30px);
+  line-height: 1.25;
+  letter-spacing: -.8px;
+}
+
+.subtitle {
+  margin: 10px 0 26px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.field { margin-bottom: 17px; }
+
+.field label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.field input {
+  width: 100%;
+  height: 48px;
+  padding: 0 14px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  outline: none;
+  background: #fff;
+  color: var(--ink);
+  font: inherit;
+  font-size: 14px;
+  transition: border-color .2s, box-shadow .2s;
+}
+
+.field input::placeholder { color: #a6a9b7; }
+
+.field input:focus {
+  border-color: var(--purple);
+  box-shadow: 0 0 0 3px rgba(112, 87, 232, .12);
+}
+
+.password-wrap { position: relative; }
+.password-wrap input { padding-right: 62px; }
+
+.toggle-password {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  border: 0;
+  padding: 5px;
+  color: var(--purple);
+  background: transparent;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.hint, .error {
+  display: block;
+  margin-top: 6px;
+  font-size: 11px;
+}
+
+.hint { color: #9296a7; }
+.error { color: var(--danger); min-height: 0; }
+.error:empty { display: none; }
+
+.terms {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  margin: 5px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.terms input {
+  margin: 2px 0 0;
+  accent-color: var(--purple);
+}
+
+a { color: var(--purple); text-decoration: none; font-weight: 700; }
+a:hover { text-decoration: underline; }
+.terms-error { margin-left: 24px; }
+
+.submit-btn {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 22px;
+  border: 0;
+  border-radius: 10px;
+  color: white;
+  background: linear-gradient(110deg, #8068f2, #6249dc);
+  font: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 9px 20px rgba(112, 87, 232, .22);
+  transition: transform .2s, box-shadow .2s;
+}
+
+.submit-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 24px rgba(112, 87, 232, .3);
+}
+
+.submit-btn span { font-size: 19px; line-height: 1; }
+
+.success-message {
+  margin: 13px 0 0;
+  color: #218653;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.login-note {
+  margin: 25px 0 0;
+  padding-top: 20px;
+  border-top: 1px solid #f0f0f5;
+  color: var(--muted);
+  text-align: center;
+  font-size: 12px;
+}
+
+.footer-note {
+  margin: 19px 0 0;
+  color: #999caf;
+  font-size: 11px;
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  .signup-card { padding: 30px 23px 25px; border-radius: 18px; }
+  .page { justify-content: flex-start; padding-top: 24px; }
+}
